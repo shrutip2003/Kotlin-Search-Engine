@@ -1,6 +1,6 @@
 package websearch
 
-import java.util.*
+import java.util.Collections
 
 class SearchEngine(val map: Map<URL, WebPage>) {
   var index: Map<String, List<SearchResult>> = mapOf()

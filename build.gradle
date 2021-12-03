@@ -45,5 +45,5 @@ test {
 
 kotlinter {
     indentSize = 2
-    disabledRules = ["no-multi-spaces","no-wildcard-imports"]
+    disabledRules = ["no-multi-spaces"]
 }
