@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkstyle version="8.0">
+	<file name="src/main/kotlin/websearch/SearchEngine.kt">
+		<error line="6" column="1" severity="error" message="Unexpected indentation (4) (should be 2)" source="indent" />
+		<error line="8" column="1" severity="error" message="Unexpected indentation (4) (should be 2)" source="indent" />
+		<error line="9" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="10" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="11" column="1" severity="error" message="Unexpected indentation (12) (should be 6)" source="indent" />
+		<error line="12" column="1" severity="error" message="Unexpected indentation (12) (should be 6)" source="indent" />
+		<error line="13" column="1" severity="error" message="Unexpected indentation (12) (should be 6)" source="indent" />
+		<error line="14" column="1" severity="error" message="Unexpected indentation (16) (should be 8)" source="indent" />
+		<error line="15" column="1" severity="error" message="Unexpected indentation (12) (should be 6)" source="indent" />
+		<error line="16" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="18" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="19" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="20" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="21" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="22" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="24" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="25" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="26" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="27" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="28" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="29" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="30" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="31" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="32" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="33" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="34" column="1" severity="error" message="Unexpected indentation (4) (should be 2)" source="indent" />
+		<error line="36" column="1" severity="error" message="Unexpected indentation (4) (should be 2)" source="indent" />
+		<error line="37" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="38" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="39" column="1" severity="error" message="Unexpected indentation (12) (should be 6)" source="indent" />
+		<error line="40" column="1" severity="error" message="Unexpected indentation (12) (should be 6)" source="indent" />
+		<error line="41" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="42" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="43" column="1" severity="error" message="Unexpected indentation (4) (should be 2)" source="indent" />
+		<error line="45" column="1" severity="error" message="Unexpected indentation (4) (should be 2)" source="indent" />
+		<error line="46" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="48" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="49" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="50" column="1" severity="error" message="Unexpected indentation (12) (should be 6)" source="indent" />
+		<error line="51" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="52" column="1" severity="error" message="Unexpected indentation (8) (should be 6)" source="indent" />
+		<error line="53" column="1" severity="error" message="Unexpected indentation (12) (should be 6)" source="indent" />
+		<error line="54" column="1" severity="error" message="Unexpected indentation (16) (should be 8)" source="indent" />
+		<error line="55" column="1" severity="error" message="Unexpected indentation (16) (should be 8)" source="indent" />
+		<error line="56" column="1" severity="error" message="Unexpected indentation (12) (should be 6)" source="indent" />
+		<error line="57" column="1" severity="error" message="Unexpected indentation (4) (should be 2)" source="indent" />
+		<error line="61" column="1" severity="error" message="Unexpected indentation (4) (should be 2)" source="indent" />
+		<error line="66" column="1" severity="error" message="Unexpected indentation (4) (should be 2)" source="indent" />
+		<error line="67" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="68" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="69" column="1" severity="error" message="Unexpected indentation (12) (should be 6)" source="indent" />
+		<error line="70" column="1" severity="error" message="Unexpected indentation (16) (should be 8)" source="indent" />
+		<error line="71" column="1" severity="error" message="Unexpected indentation (12) (should be 6)" source="indent" />
+		<error line="72" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="73" column="1" severity="error" message="Unexpected indentation (12) (should be 6)" source="indent" />
+		<error line="74" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="75" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="76" column="1" severity="error" message="Unexpected indentation (4) (should be 2)" source="indent" />
+	</file>
+	<file name="src/main/kotlin/websearch/Web.kt">
+		<error line="6" column="1" severity="error" message="Unexpected indentation (4) (should be 2)" source="indent" />
+		<error line="10" column="1" severity="error" message="Unexpected indentation (4) (should be 2)" source="indent" />
+		<error line="11" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="12" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="13" column="1" severity="error" message="Unexpected indentation (8) (should be 4)" source="indent" />
+		<error line="14" column="1" severity="error" message="Unexpected indentation (4) (should be 2)" source="indent" />
+	</file>
+</checkstyle>
