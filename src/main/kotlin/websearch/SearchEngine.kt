@@ -3,77 +3,76 @@ package websearch
 import java.util.*
 
 class SearchEngine(val map: Map<URL, WebPage>) {
-    var index: Map<String, List<SearchResult>> = mapOf()
+  var index: Map<String, List<SearchResult>> = mapOf()
 
-    fun compileIndex() {
-        val list = mutableListOf<Pair<String, URL>>()  // list of (word, url)
-        for (entry in map) {
-            val words = entry.value.extractWords()
-            val url = entry.key
-            for (word in words) {
-                list.add(Pair(word, url))
-            }
-        }
-
-        // SHUFFLING STEP
-        // list of the form [(word,url)] :: word x appears in page url y]
-        // list.groupBy of the form {word = [(word,url)] } -- word mapped to list of (word,url) pairs
-        // values are a list of (string, url)
-        // to covert list of (string, url) to list of url
-
-        // mapvalues  (grouped.mapValues { entry -> entry.value.map{it.map{it.second}}} )kept giving a type error, hence had to transform the values separately and zip them with the words to create a new map
-        val grouped: Map<String, List<Pair<String, URL>>> = list.groupBy { x -> x.first }
-        val words = grouped.keys
-        val values: Collection<List<Pair<String, URL>>> = grouped.values
-        val new = values.map { it.map { it.second } }
-        val wordsWithListOFUrl: Map<String, List<URL>> = words.zip(new).toMap()
-        // wordsWithListOfUrl is a map between word , and a list of urls that mention the word
-        val wordsWithRankedURL = wordsWithListOFUrl.mapValues { entry -> rank(entry.value) }
-        index = wordsWithRankedURL
-        println(index)
+  fun compileIndex() {
+    val list = mutableListOf<Pair<String, URL>>()  // list of (word, url)
+    for (entry in map) {
+      val words = entry.value.extractWords()
+      val url = entry.key
+      for (word in words) {
+        list.add(Pair(word, url))
+      }
     }
 
-    fun rank(listUrl: List<URL>): List<SearchResult> {
-        val list = mutableListOf<SearchResult>()
-        for (url in listUrl.distinct()) {
-            val num = Collections.frequency(listUrl, url) // count of url in listUrl
-            list.add(SearchResult(url, num))
-        }
-        return list.sortedBy { it.numRefs }.reversed()
-    }
+    // SHUFFLING STEP
+    // list of the form [(word,url)] :: word x appears in page url y]
+    // list.groupBy of the form {word = [(word,url)] } -- word mapped to list of (word,url) pairs
+    // values are a list of (string, url)
+    // to covert list of (string, url) to list of url
 
-    fun searchFor(query: String): SearchResultsSummary {
-        val results: List<SearchResult>? = index.get(query)
+    // mapvalues  (grouped.mapValues { entry -> entry.value.map{it.map{it.second}}} )kept giving a type error, hence had to transform the values separately and zip them with the words to create a new map
+    val grouped: Map<String, List<Pair<String, URL>>> = list.groupBy { x -> x.first }
+    val words = grouped.keys
+    val values: Collection<List<Pair<String, URL>>> = grouped.values
+    val new = values.map { it.map { it.second } }
+    val wordsWithListOFUrl: Map<String, List<URL>> = words.zip(new).toMap()
+    // wordsWithListOfUrl is a map between word , and a list of urls that mention the word
+    val wordsWithRankedURL = wordsWithListOFUrl.mapValues { entry -> rank(entry.value) }
+    index = wordsWithRankedURL
+  }
 
-        // gets executed if result is not null
-        results?.let {
-            return SearchResultsSummary(query, results)
-        }
-        // gets executed if result is null
-            ?: run {
-                val emptyResults    = listOf<SearchResult>()
-                return SearchResultsSummary(query, emptyResults)
-            }
+  fun rank(listUrl: List<URL>): List<SearchResult> {
+    val list = mutableListOf<SearchResult>()
+    for (url in listUrl.distinct()) {
+      val num = Collections.frequency(listUrl, url) // count of url in listUrl
+      list.add(SearchResult(url, num))
     }
+    return list.sortedBy { it.numRefs }.reversed()
+  }
+
+  fun searchFor(query: String): SearchResultsSummary {
+    val results: List<SearchResult>? = index.get(query)
+
+    // gets executed if result is not null
+    results?.let {
+      return SearchResultsSummary(query, results)
+    }
+      // gets executed if result is null
+      ?: run {
+        val emptyResults    = listOf<SearchResult>()
+        return SearchResultsSummary(query, emptyResults)
+      }
+  }
 }
 
 class SearchResult(val url: URL, val numRefs: Int) {
-    override fun toString(): String = "\t $url - $numRefs references"
+  override fun toString(): String = "\t $url - $numRefs references"
 }
 
 class SearchResultsSummary(val query: String, val results: List<SearchResult>) {
 
-    override fun toString(): String {
-        val final = StringBuilder("Results for \"$query\": \n")
-        if (results.isNotEmpty()) {
-            for (result in results) {
-                final.append(result.toString() + "\n")
-            }
-        } else {
-            final.append("\t No search results available for $query")
-        }
-        return final.toString()
+  override fun toString(): String {
+    val final = StringBuilder("Results for \"$query\": \n")
+    if (results.isNotEmpty()) {
+      for (result in results) {
+        final.append(result.toString() + "\n")
+      }
+    } else {
+      final.append("\t No search results available for $query")
     }
+    return final.toString()
+  }
 }
 
 // to test the indexer

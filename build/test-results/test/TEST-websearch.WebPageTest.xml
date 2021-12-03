@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="websearch.WebPageTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-12-03T14:04:43" hostname="dyn3129-229.wlan.ic.ac.uk" time="0.105">
+<testsuite name="websearch.WebPageTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-12-03T14:14:49" hostname="dyn3129-229.wlan.ic.ac.uk" time="0.093">
   <properties/>
-  <testcase name="extracts words from page" classname="websearch.WebPageTest" time="0.102"/>
-  <testcase name="converts case and removes punctuation" classname="websearch.WebPageTest" time="0.002"/>
+  <testcase name="extracts words from page" classname="websearch.WebPageTest" time="0.089"/>
+  <testcase name="converts case and removes punctuation" classname="websearch.WebPageTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
